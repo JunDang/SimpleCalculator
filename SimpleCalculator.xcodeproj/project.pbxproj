@@ -13,6 +13,9 @@
 		4C39FE192272290700E28544 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C39FE182272290700E28544 /* Assets.xcassets */; };
 		4C39FE1C2272290700E28544 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C39FE1A2272290700E28544 /* LaunchScreen.storyboard */; };
 		4C39FE1F2272290700E28544 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C39FE1E2272290700E28544 /* main.m */; };
+		4C39FE3122738F0800E28544 /* CALayer+UIOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C39FE3022738F0800E28544 /* CALayer+UIOperation.m */; };
+		4C39FE3B2273F04D00E28544 /* Calculator_Brain.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C39FE3A2273F04D00E28544 /* Calculator_Brain.m */; };
+		4C39FE3E22751F9000E28544 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C39FE3D22751F9000E28544 /* CustomButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		4C39FE1B2272290700E28544 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C39FE1D2272290700E28544 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C39FE1E2272290700E28544 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C39FE2F22738F0800E28544 /* CALayer+UIOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CALayer+UIOperation.h"; sourceTree = "<group>"; };
+		4C39FE3022738F0800E28544 /* CALayer+UIOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CALayer+UIOperation.m"; sourceTree = "<group>"; };
+		4C39FE392273F04D00E28544 /* Calculator_Brain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Calculator_Brain.h; sourceTree = "<group>"; };
+		4C39FE3A2273F04D00E28544 /* Calculator_Brain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Calculator_Brain.m; sourceTree = "<group>"; };
+		4C39FE3C22751F9000E28544 /* CustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		4C39FE3D22751F9000E28544 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,8 @@
 		4C39FE0E2272290600E28544 /* SimpleCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				4C39FE322273D7D200E28544 /* Model */,
+				4C39FE252272349300E28544 /* Category */,
 				4C39FE0F2272290600E28544 /* AppDelegate.h */,
 				4C39FE102272290600E28544 /* AppDelegate.m */,
 				4C39FE122272290600E28544 /* ViewController.h */,
@@ -69,6 +80,26 @@
 				4C39FE1E2272290700E28544 /* main.m */,
 			);
 			path = SimpleCalculator;
+			sourceTree = "<group>";
+		};
+		4C39FE252272349300E28544 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4C39FE2F22738F0800E28544 /* CALayer+UIOperation.h */,
+				4C39FE3022738F0800E28544 /* CALayer+UIOperation.m */,
+				4C39FE3C22751F9000E28544 /* CustomButton.h */,
+				4C39FE3D22751F9000E28544 /* CustomButton.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		4C39FE322273D7D200E28544 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C39FE392273F04D00E28544 /* Calculator_Brain.h */,
+				4C39FE3A2273F04D00E28544 /* Calculator_Brain.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +172,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C39FE3E22751F9000E28544 /* CustomButton.m in Sources */,
 				4C39FE142272290600E28544 /* ViewController.m in Sources */,
 				4C39FE1F2272290700E28544 /* main.m in Sources */,
+				4C39FE3B2273F04D00E28544 /* Calculator_Brain.m in Sources */,
 				4C39FE112272290600E28544 /* AppDelegate.m in Sources */,
+				4C39FE3122738F0800E28544 /* CALayer+UIOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.beida.SimpleCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -311,7 +345,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ca.beida.SimpleCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
